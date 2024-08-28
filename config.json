@@ -1,0 +1,25 @@
+{
+  "oracle": {
+    "ip": "127.0.0.1",
+    "port": "1529",
+    "username": "system",
+    "password": "lxxxxxx",
+    "instance": "xxxxxxxxxxxx",
+	"service_name": "yxxxxxxxxxxx",
+    "oracle_client_path": "C:\\instantclient-basic-windows.x64-11.2.0.4.0\\instantclient_11_2",
+	"use_service_name": true
+  },
+  "routes": {
+    "/route1": {
+      "name": "昨日过车数据查询结果",
+      "sql": "SELECT count(*) as 查询结果 FROM dvsys.code$ where ID#>:value"
+    },
+    "/route2": {
+      "name": "前日违法数据查询结果",
+      "sql": "SELECT count(*) as 查询结果 FROM dvsys.code$"
+    }
+  },
+  "flask": {
+    "port": 5001
+  }
+}
